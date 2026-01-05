@@ -10,6 +10,8 @@
 
 *A modern, futuristic QR code generator built with cutting-edge technologies*
 
+[**🟢 Try Live Demo →**](https://qr-maker.biezz.my.id/)
+
 </div>
 
 ---
@@ -830,6 +832,6 @@ Proyek ini dilisensikan di bawah **MIT License** - lihat file [LICENSE](LICENSE)
 
 ---
 
-Dibuat oleh [Biezz](https://github.com/biezz-2)
+Dibuat dengan ❤️ oleh [Biezz](https://github.com/biezz-2)
 
 </div>
