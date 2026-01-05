@@ -1,141 +1,835 @@
-# 🚀 Welcome to Z.ai Code Scaffold
+# 🚀 QR MAKER - Next Generation QR Code Generator
 
-A modern, production-ready web application scaffold powered by cutting-edge technologies, designed to accelerate your development with [Z.ai](https://chat.z.ai)'s AI-powered coding assistance.
+<div align="center">
 
-## ✨ Technology Stack
+![QR Maker Banner](https://img.shields.io/badge/QR%20Maker-v1.0-38bdf8?style=for-the-badge&logoColor=white)
+![Next.js](https://img.shields.io/badge/Next.js-15-black?style=for-the-badge&logo=next.js)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?style=for-the-badge&logo=typescript)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind-4-38bdf8?style=for-the-badge&logo=tailwindcss)
+![Bun](https://img.shields.io/badge/Bun-1.3-fbf0df?style=for-the-badge&logo=bun)
 
-This scaffold provides a robust foundation built with:
+*A modern, futuristic QR code generator built with cutting-edge technologies*
 
-### 🎯 Core Framework
-- **⚡ Next.js 15** - The React framework for production with App Router
-- **📘 TypeScript 5** - Type-safe JavaScript for better developer experience
-- **🎨 Tailwind CSS 4** - Utility-first CSS framework for rapid UI development
+</div>
 
-### 🧩 UI Components & Styling
-- **🧩 shadcn/ui** - High-quality, accessible components built on Radix UI
-- **🎯 Lucide React** - Beautiful & consistent icon library
-- **🌈 Framer Motion** - Production-ready motion library for React
-- **🎨 Next Themes** - Perfect dark mode in 2 lines of code
+---
 
-### 📋 Forms & Validation
-- **🎣 React Hook Form** - Performant forms with easy validation
-- **✅ Zod** - TypeScript-first schema validation
+## 📋 Daftar Isi
 
-### 🔄 State Management & Data Fetching
-- **🐻 Zustand** - Simple, scalable state management
-- **🔄 TanStack Query** - Powerful data synchronization for React
-- **🌐 Fetch** - Promise-based HTTP request
+1. [Tentang Proyek](#tentang-proyek)
+2. [Fitur Utama](#fitur-utama)
+3. [Teknologi yang Digunakan](#teknologi-yang-digunakan)
+4. [Arsitektur Sistem](#arsitektur-sistem)
+5. [Struktur Proyek](#struktur-proyek)
+6. [Instalasi & Konfigurasi](#instalasi--konfigurasi)
+7. [Panduan Penggunaan](#panduan-penggunaan)
+8. [API Reference](#api-reference)
+9. [Deployment](#deployment)
+10. [Kontribusi](#kontribusi)
+11. [Lisensi](#lisensi)
 
-### 🗄️ Database & Backend
-- **🗄️ Prisma** - Next-generation TypeScript ORM
-- **🔐 NextAuth.js** - Complete open-source authentication solution
+---
 
-### 🎨 Advanced UI Features
-- **📊 TanStack Table** - Headless UI for building tables and datagrids
-- **🖱️ DND Kit** - Modern drag and drop toolkit for React
-- **📊 Recharts** - Redefined chart library built with React and D3
-- **🖼️ Sharp** - High performance image processing
+## 🔮 Tentang Proyek
 
-### 🌍 Internationalization & Utilities
-- **🌍 Next Intl** - Internationalization library for Next.js
-- **📅 Date-fns** - Modern JavaScript date utility library
-- **🪝 ReactUse** - Collection of essential React hooks for modern development
+**QR Maker** adalah generator kode QR modern yang dibangun dengan teknologi tercanggih saat ini. Aplikasi web ini memungkinkan pengguna untuk membuat kode QR yang disesuaikan dengan kebutuhan mereka, mulai dari URL sederhana hingga konfigurasi WiFi yang kompleks.
 
-## 🎯 Why This Scaffold?
+### Visi & Misi
 
-- **🏎️ Fast Development** - Pre-configured tooling and best practices
-- **🎨 Beautiful UI** - Complete shadcn/ui component library with advanced interactions
-- **🔒 Type Safety** - Full TypeScript configuration with Zod validation
-- **📱 Responsive** - Mobile-first design principles with smooth animations
-- **🗄️ Database Ready** - Prisma ORM configured for rapid backend development
-- **🔐 Auth Included** - NextAuth.js for secure authentication flows
-- **📊 Data Visualization** - Charts, tables, and drag-and-drop functionality
-- **🌍 i18n Ready** - Multi-language support with Next Intl
-- **🚀 Production Ready** - Optimized build and deployment settings
-- **🤖 AI-Friendly** - Structured codebase perfect for AI assistance
+Visi kami adalah menyediakan alat pembuat kode QR yang paling intuitif, powerful, dan mudah digunakan di internet. Dengan antarmuka pengguna yang elegan dan fitur-fitur canggih, kami memastikan setiap pengguna dapat menghasilkan kode QR profesional dalam hitungan detik.
 
-## 🚀 Quick Start
+### Target Pengguna
+
+| Kategori | Penggunaan |
+|----------|------------|
+| 🧑‍💼 **Pengusaha & Pebisnis** | Materi pemasaran dan informasi kontak |
+| 👨‍💻 **Developer** | Proyek yang memerlukan integrasi kode QR |
+| 🎨 **Content Creator** | Tautan media sosial dan portofolio |
+| 👥 **Pengguna Umum** | Kebutuhan sehari-hari |
+
+---
+
+## ✨ Fitur Utama
+
+### 1. 📱 Multi-Format Konten
+
+#### URL Kode QR
+Bangun kode QR untuk tautan website dengan dukungan:
+- Input URL otomatis dengan validasi format
+- Preview real-time saat mengetik
+- Dukungan panjang URL tanpa batas
+
+#### Teks Biasa
+Enkripsi teks arbitrary ke dalam kode QR:
+- Dukungan Unicode penuh
+- Karakter khusus dan emoji
+- Panjang teks hingga 1000+ karakter
+
+#### Email
+Buat kode QR untuk pengiriman email:
+- Alamat email tujuan
+- Subjek email (opsional)
+- Isi pesan email (opsional)
+- Format RFC compliant `mailto:` protocol
+
+#### Nomor Telepon
+Dukungan format telepon internasional:
+- Format internasional (+62, +1, dll.)
+- Auto-format untuk kemudahan
+- Dukungan ekstensi telepon
+
+#### WiFi
+Generate kode QR untuk koneksi WiFi instan:
+- Dukungan WPA/WPA2
+- Dukungan WEP
+- Jaringan terbuka (tanpa password)
+- SSID tersembunyi
+
+### 2. 🎨 Kustomisasi Visual
+
+#### Warna & Kontras
+Kontrol penuh atas penampilan visual:
+- **Warna Depan (QR Code)** - Hex color picker + input manual
+- **Warna Latar Belakang** - Solid color atau gambar custom
+- **Kontras Tinggi** - Algoritma optimasi otomatis
+- **Mode Gelap/Terang** - Tema otomatis berbasis sistem
+
+#### Logo & Branding
+Tambahkan identitas brand ke dalam kode QR:
+
+| Fitur | Deskripsi |
+|-------|-----------|
+| **Upload Logo** | Format PNG, JPG, WebP, GIF |
+| **Mode Auto-Fit** | Penyesuaian otomatis dengan aspect ratio |
+| **Mode Manual** | Kontrol ukuran persentase |
+| **Bingkai Circular** | Area logo dengan background circular |
+| **Maksimum 22%** | Batas ukuran untuk menjaga scannability |
+
+#### Gambar Latar Belakang
+Buat kode QR yang estetis dengan background custom:
+- **Drag & Drop** - Upload intuitif
+- **Opacity Control** - Pengaturan transparansi 10-100%
+- **Cover Mode** - Gambar otomatis menyesuaikan canvas
+- **Fallback Color** - Warna cadangan untuk area kosong
+
+### 3. ⚙️ Pengaturan Teknis
+
+#### Tingkat Koreksi Error
+Pilih tingkat redundansi data:
+
+| Level | Persentase | Penggunaan |
+|-------|------------|------------|
+| **Low (L)** | 7% | Kode QR bersih |
+| **Medium (M)** | 15% | Balance umum |
+| **Quartile (Q)** | 25% | Untuk background/warna |
+| **High (H)** | 30% | Maksimal untuk logo/cetak |
+
+#### Ukuran Kode QR
+Slider interaktif dengan rentang:
+- **Minimum**: 128px
+- **Maximum**: 512px
+- **Step**: 32px
+- **Responsive preview** untuk mobile
+
+### 4. 💾 Ekspor & Download
+
+#### Format Unduhan
+- **PNG High Quality** - Lossless compression
+- **Transparent Background** - Opsi khusus
+- **Auto Naming** - Timestamp-based filename
+- **Direct Download** - Tanpa redirect
+
+---
+
+## 🛠️ Teknologi yang Digunakan
+
+### Core Framework
+
+#### Next.js 15
+Framework React tercanggih dengan fitur:
+- **App Router** - Routing modern berbasis filesystem
+- **Server Components** - Rendering sisi server otomatis
+- **Streaming SSR** - First contentful paint cepat
+- **Server Actions** - Mutasi data tanpa API endpoint
+- **Partial Prerendering** - Hybrid rendering optimal
+
+#### TypeScript 5
+Type safety komprehensif:
+- **Strict Mode** - Error prevention maksimal
+- **Generic Types** - Reusable component logic
+- **Type Inference** - Automatic type detection
+- **Decorator Support** - Stage 3 proposal
+
+### Styling & UI
+
+#### Tailwind CSS 4
+Utility-first CSS dengan inovasi:
+- **Zero-runtime** - CSS generation optimal
+- **CSS Variables** - Theming native
+- **@import & @theme** - Modern syntax
+- **JIT Engine** - Just-in-time compilation
+
+#### shadcn/ui
+Component library berbasis Radix UI:
+- **Accessible** - WCAG 2.1 compliant
+- **Headless** - Full customization freedom
+- **Copy-paste** - Own your components
+- **Type-safe** - Written in TypeScript
+
+#### Lucide React
+Ikonografi modern:
+- **Consistent Design** - Unified visual language
+- **Tree-shakable** - Small bundle size
+- **Customizable** - Stroke, size, color props
+
+#### Framer Motion
+Animasi production-ready:
+- **Spring Physics** - Natural motion feel
+- **Layout Animations** - Smooth transitions
+- **Gesture Support** - Drag, hover, tap
+- **Exit Animations** - Polymorphic unmounts
+
+### State Management & Data
+
+#### Zustand
+Global state management:
+- **Minimal Boilerplate** - Simple API
+- **DevTools** - Debugging built-in
+- **Middleware Support** - Persistence, logging
+- **Type-safe** - TypeScript native
+
+#### TanStack Query
+Server state synchronization:
+- **Caching** - Intelligent cache invalidation
+- **Prefetching** - Speculative execution
+- **Mutations** - Server state updates
+- **DevTools** - Query inspection
+
+### Database & Backend
+
+#### Prisma ORM
+Type-safe database access:
+- **Auto-generated Types** - Zero manual typing
+- **Migration System** - Version-controlled schema
+- **Query Engine** - Optimized SQL generation
+- **Multi-database** - PostgreSQL, MySQL, SQLite
+
+#### NextAuth.js
+Authentication solution:
+- **OAuth Providers** - Google, GitHub, etc.
+- **Credentials Auth** - Email/password
+- **JWT Sessions** - Stateless authentication
+- **Security Headers** - CSRF, XSS protection
+
+### Utilities & Helpers
+
+#### React Hook Form
+Performant form handling:
+- **Uncontrolled Inputs** - Minimal re-renders
+- **Validation** - Zod integration
+- **Error Handling** - Detailed error messages
+- **Performance** - 10x faster than controlled
+
+#### Zod
+Schema validation:
+- **Type Inference** - Compile-time types
+- **Error Mapping** - Human-readable messages
+- **Async Support** - Server validation
+- **TypeScript Native** - No runtime overhead
+
+#### Date-fns
+Modern date utilities:
+- **Tree-shakable** - Import only what you need
+- **Immutable** - Pure function approach
+- **Locale Support** - Internationalization
+- **Chainable API** - Fluent interface
+
+---
+
+## 🏗️ Arsitektur Sistem
+
+### High-Level Architecture
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│                     Client Browser                          │
+│  ┌─────────────────────────────────────────────────────┐   │
+│  │              React Application (SPA)                │   │
+│  │  ┌─────────────┐ ┌─────────────┐ ┌─────────────┐   │   │
+│  │  │   Pages     │ │  Components │ │   Hooks     │   │   │
+│  │  └─────────────┘ └─────────────┘ └─────────────┘   │   │
+│  └─────────────────────────────────────────────────────┘   │
+│                          │                                  │
+│                          ▼                                  │
+│  ┌─────────────────────────────────────────────────────┐   │
+│  │              Next.js Server (SSR)                   │   │
+│  │  ┌─────────────┐ ┌─────────────┐ ┌─────────────┐   │   │
+│  │  │  API Routes │ │  Middleware │ │  Static     │   │   │
+│  │  └─────────────┘ └─────────────┘ └─────────────┘   │   │
+│  └─────────────────────────────────────────────────────┘   │
+│                          │                                  │
+│                          ▼                                  │
+│  ┌─────────────────────────────────────────────────────┐   │
+│  │              External Services                      │   │
+│  │  ┌─────────────┐ ┌─────────────┐ ┌─────────────┐   │   │
+│  │  │   Database  │ │  Auth       │ │  CDN/Images │   │   │
+│  │  └─────────────┘ └─────────────┘ └─────────────┘   │   │
+│  └─────────────────────────────────────────────────────┘   │
+└─────────────────────────────────────────────────────────────┘
+```
+
+### Component Architecture
+
+```
+QRGenerator (Main Component)
+├── Header
+│   ├── Logo
+│   └── Navigation
+├── Main Content (Grid Layout)
+│   ├── Left Panel (Input Controls)
+│   │   ├── Card: QR Content
+│   │   │   └── Tabs: URL, Text, Email, Phone, WiFi
+│   │   └── Card: Settings
+│   │       ├── Error Correction Level
+│   │       ├── Size Slider
+│   │       ├── Background Section
+│   │       │   ├── Solid Color Mode
+│   │       │   └── Image Mode
+│   │       │       ├── Drag & Drop Zone
+│   │       │       ├── Opacity Slider
+│   │       │       └── Color Controls
+│   │       └── Logo Section
+│   │           ├── Upload Input
+│   │           └── Size Controls
+│   │
+│   └── Right Panel (Preview)
+│       ├── QR Display
+│       │   ├── Canvas (Merged Output)
+│       │   └── Hidden QR Code
+│       ├── Info Badges
+│       ├── Download Button
+│       └── Tips Section
+│
+└── Footer
+    └── Links
+```
+
+### Data Flow Diagram
+
+```
+User Input
+    │
+    ▼
+┌─────────────┐
+│   React     │◄── State Management (Zustand)
+│   State     │
+└──────┬──────┘
+       │
+       ▼
+┌─────────────┐
+│   Effect    │◄── React Hooks (useEffect)
+│   Hooks     │
+└──────┬──────┘
+       │
+       ▼
+┌─────────────┐
+│   QR Code   │◄── qrcode.react
+│   Library   │
+└──────┬──────┘
+       │
+       ▼
+┌─────────────┐
+│   Canvas    │◄── Canvas API
+│   Merge     │
+└──────┬──────┘
+       │
+       ▼
+┌─────────────┐
+│   Download  │◄── PNG Export
+└─────────────┘
+```
+
+---
+
+## 📁 Struktur Proyek
+
+```
+qr-maker/
+├── .dockerignore          # Docker ignore rules
+├── .gitignore             # Git ignore rules
+├── bun.lock               # Bun lockfile
+├── Caddyfile              # Caddy server config
+├── components.json        # shadcn/ui config
+├── eslint.config.mjs      # ESLint configuration
+├── next.config.ts         # Next.js configuration
+├── package.json           # Dependencies & scripts
+├── postcss.config.mjs     # PostCSS config
+├── README.md              # This file
+├── tailwind.config.ts     # Tailwind configuration
+├── tsconfig.json          # TypeScript configuration
+│
+├── prisma/
+│   └── schema.prisma      # Database schema
+│
+├── public/
+│   ├── apple-touch-icon.png
+│   ├── favicon-192x192.png
+│   ├── favicon-512x512.png
+│   ├── favicon.ico
+│   ├── logo.svg
+│   ├── manifest.json      # PWA manifest
+│   └── robots.txt         # SEO rules
+│
+└── src/
+    ├── app/
+    │   ├── api/
+    │   │   └── route.ts   # API endpoint
+    │   ├── globals.css    # Global styles
+    │   ├── layout.tsx     # Root layout
+    │   └── page.tsx       # Main page (QR Generator)
+    │
+    ├── components/
+    │   ├── theme-provider.tsx  # Theme context
+    │   └── ui/                 # shadcn/ui components
+    │       ├── accordion.tsx
+    │       ├── alert-dialog.tsx
+    │       ├── alert.tsx
+    │       ├── aspect-ratio.tsx
+    │       ├── avatar.tsx
+    │       ├── badge.tsx
+    │       ├── breadcrumb.tsx
+    │       ├── button.tsx
+    │       ├── calendar.tsx
+    │       ├── card.tsx
+    │       ├── carousel.tsx
+    │       ├── chart.tsx
+    │       ├── checkbox.tsx
+    │       ├── collapsible.tsx
+    │       ├── command.tsx
+    │       ├── context-menu.tsx
+    │       ├── dialog.tsx
+    │       ├── drawer.tsx
+    │       ├── dropdown-menu.tsx
+    │       ├── form.tsx
+    │       ├── hover-card.tsx
+    │       ├── input-otp.tsx
+    │       ├── input.tsx
+    │       ├── label.tsx
+    │       ├── menubar.tsx
+    │       ├── navigation-menu.tsx
+    │       ├── pagination.tsx
+    │       ├── popover.tsx
+    │       ├── progress.tsx
+    │       ├── radio-group.tsx
+    │       ├── resizable.tsx
+    │       ├── scroll-area.tsx
+    │       ├── select.tsx
+    │       ├── separator.tsx
+    │       ├── sheet.tsx
+    │       ├── sidebar.tsx
+    │       ├── skeleton.tsx
+    │       ├── slider.tsx
+    │       ├── sonner.tsx
+    │       ├── switch.tsx
+    │       ├── table.tsx
+    │       ├── tabs.tsx
+    │       ├── textarea.tsx
+    │       ├── toast.tsx
+    │       ├── toaster.tsx
+    │       ├── toggle-group.tsx
+    │       ├── toggle.tsx
+    │       └── tooltip.tsx
+    │
+    ├── hooks/
+    │   ├── use-mobile.ts    # Mobile detection hook
+    │   └── use-toast.ts     # Toast notification hook
+    │
+    └── lib/
+        ├── db.ts            # Prisma client
+        ├── localstorage-polyfill.ts  # SSR polyfill
+        └── utils.ts         # Utility functions (cn)
+```
+
+---
+
+## 🚀 Instalasi & Konfigurasi
+
+### Prasyarat Sistem
+
+| Requirement | Versi Minimum |
+|-------------|---------------|
+| **Bun** | v1.3.4 |
+| **Node.js** | v18.0 (opsional) |
+| **Sistem Operasi** | Linux, macOS, Windows |
+
+### Langkah Instalasi
+
+#### 1. Clone Repository
 
 ```bash
-# Install dependencies
+git clone https://github.com/biezz-2/qr-maker.git
+cd qr-maker
+```
+
+#### 2. Install Dependencies
+
+```bash
 bun install
+```
 
-# Start development server
+#### 3. Environment Setup
+
+Buat file `.env` berdasarkan contoh:
+
+```env
+# Database
+DATABASE_URL="file:./dev.db"
+
+# Authentication (Optional)
+NEXTAUTH_SECRET="your-secret-key"
+NEXTAUTH_URL="http://localhost:3000"
+
+# OAuth Providers (Optional)
+GITHUB_ID="your-github-client-id"
+GITHUB_SECRET="your-github-client-secret"
+GOOGLE_CLIENT_ID="your-google-client-id"
+GOOGLE_CLIENT_SECRET="your-google-client-secret"
+```
+
+#### 4. Database Setup
+
+```bash
+# Generate Prisma client
+bun run db:generate
+
+# Push schema to database
+bun run db:push
+
+# Untuk development dengan migrations
+bun run db:migrate
+```
+
+#### 5. Jalankan Development Server
+
+```bash
 bun run dev
+```
 
-# Build for production
+Aplikasi akan berjalan di `http://localhost:3000`
+
+---
+
+## 📖 Panduan Penggunaan
+
+### Membuat Kode QR Pertama Anda
+
+#### Langkah 1: Pilih Tipe Konten
+
+Di panel "QR Content", pilih salah satu tab:
+
+| Tab | Penggunaan |
+|-----|------------|
+| 🔗 **URL** | Tautan website |
+| 📝 **Text** | Teks biasa |
+| 📧 **Email** | Alamat email |
+| 📞 **Phone** | Nomor telepon |
+| 📶 **WiFi** | Jaringan WiFi |
+
+#### Langkah 2: Masukkan Data
+
+Sesuaikan input sesuai tipe yang dipilih:
+
+```typescript
+// Contoh URL
+Input: "https://example.com"
+
+// Contoh WiFi
+SSID: "MyWiFiNetwork"
+Security: "WPA/WPA2"
+Password: "secretpassword"
+```
+
+#### Langkah 3: Kustomisasi Tampilan
+
+##### Mengubah Warna
+1. Di bagian "Background", pilih "Solid Color"
+2. Klik color picker untuk warna QR code
+3. Klik color picker kedua untuk warna background
+
+##### Menambahkan Logo
+1. Scroll ke bagian "Logo (Optional)"
+2. Klik "Choose File" atau drag & drop
+3. Rekomendasi: PNG dengan background transparan
+4. Gunakan "Auto-Fit" untuk hasil terbaik
+
+##### Menambahkan Background Image
+1. Di bagian "Background", pilih "Custom Image"
+2. Upload gambar atau drag & drop
+3. Atur opacity dengan slider (rekomendasi: 70-90%)
+4. Sesuaikan warna QR untuk kontras
+
+#### Langkah 4: Download
+
+Klik tombol "Download PNG" untuk menyimpan kode QR Anda.
+
+### Tips Optimasi
+
+| Skenario | Error Correction | Ukuran | Tips |
+|----------|------------------|--------|------|
+| 📄 **Pencetakan** | High (H) | Min 256px | Kontras tinggi,hindari merah |
+| 🖥️ **Digital Display** | Medium (M) | Sesuai layar | Background opacity tinggi |
+| 📦 **Packaging** | High (H) | Min 512px | Test scan sebelum produksi |
+
+---
+
+## 🔌 API Reference
+
+### GET /api
+
+Endpoint utama untuk kesehatan aplikasi.
+
+**Request:**
+```http
+GET /api HTTP/1.1
+Host: localhost:3000
+```
+
+**Response:**
+```json
+{
+  "message": "Hello, world!"
+}
+```
+
+**Status Codes:**
+- `200` - OK
+- `500` - Internal Server Error
+
+### Future API Endpoints
+
+Berikut endpoint yang direncanakan untuk pengembangan selanjutnya:
+
+#### POST /api/qr/generate
+
+Generate kode QR secara server-side.
+
+```typescript
+interface RequestBody {
+  type: 'url' | 'text' | 'email' | 'phone' | 'wifi';
+  data: Record<string, any>;
+  options?: {
+    size?: number;
+    foreground?: string;
+    background?: string;
+    errorLevel?: 'L' | 'M' | 'Q' | 'H';
+    logo?: string;
+    backgroundImage?: string;
+  };
+}
+
+interface Response {
+  success: boolean;
+  data?: {
+    qrCode: string; // Base64 PNG
+    svg?: string;
+  };
+  error?: string;
+}
+```
+
+#### POST /api/qr/batch
+
+Generate multiple kode QR sekaligus.
+
+```typescript
+interface BatchRequest {
+  requests: Array<{
+    name: string;
+    type: string;
+    data: Record<string, any>;
+    options?: object;
+  }>;
+  format?: 'zip' | 'json';
+}
+
+interface BatchResponse {
+  success: boolean;
+  data?: {
+    downloadUrl: string;
+    results: Array<{
+      name: string;
+      qrCode: string;
+    }>;
+  };
+}
+```
+
+---
+
+## 📦 Deployment
+
+### Deployment ke Vercel (Recommended)
+
+```bash
+# Install Vercel CLI
+npm i -g vercel
+
+# Deploy
+vercel
+```
+
+### Docker Deployment
+
+```bash
+# Build image
+docker build -t qr-maker .
+
+# Run container
+docker run -p 3000:3000 qr-maker
+```
+
+### Standalone Build
+
+Proyek ini mendukung standalone output untuk deployment ke platform manapun:
+
+```bash
+# Build production
 bun run build
 
 # Start production server
 bun start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) to see your application running.
+### Environment Variables untuk Production
 
-## 🤖 Powered by Z.ai
-
-This scaffold is optimized for use with [Z.ai](https://chat.z.ai) - your AI assistant for:
-
-- **💻 Code Generation** - Generate components, pages, and features instantly
-- **🎨 UI Development** - Create beautiful interfaces with AI assistance  
-- **🔧 Bug Fixing** - Identify and resolve issues with intelligent suggestions
-- **📝 Documentation** - Auto-generate comprehensive documentation
-- **🚀 Optimization** - Performance improvements and best practices
-
-Ready to build something amazing? Start chatting with Z.ai at [chat.z.ai](https://chat.z.ai) and experience the future of AI-powered development!
-
-## 📁 Project Structure
-
-```
-src/
-├── app/                 # Next.js App Router pages
-├── components/          # Reusable React components
-│   └── ui/             # shadcn/ui components
-├── hooks/              # Custom React hooks
-└── lib/                # Utility functions and configurations
+```env
+NODE_ENV=production
+DATABASE_URL="postgresql://..."
+NEXTAUTH_SECRET="production-secret"
+NEXTAUTH_URL="https://your-domain.com"
 ```
 
-## 🎨 Available Features & Components
+### Security Headers
 
-This scaffold includes a comprehensive set of modern web development tools:
+Proyek ini sudah mengkonfigurasi security headers di `next.config.ts`:
 
-### 🧩 UI Components (shadcn/ui)
-- **Layout**: Card, Separator, Aspect Ratio, Resizable Panels
-- **Forms**: Input, Textarea, Select, Checkbox, Radio Group, Switch
-- **Feedback**: Alert, Toast (Sonner), Progress, Skeleton
-- **Navigation**: Breadcrumb, Menubar, Navigation Menu, Pagination
-- **Overlay**: Dialog, Sheet, Popover, Tooltip, Hover Card
-- **Data Display**: Badge, Avatar, Calendar
-
-### 📊 Advanced Data Features
-- **Tables**: Powerful data tables with sorting, filtering, pagination (TanStack Table)
-- **Charts**: Beautiful visualizations with Recharts
-- **Forms**: Type-safe forms with React Hook Form + Zod validation
-
-### 🎨 Interactive Features
-- **Animations**: Smooth micro-interactions with Framer Motion
-- **Drag & Drop**: Modern drag-and-drop functionality with DND Kit
-- **Theme Switching**: Built-in dark/light mode support
-
-### 🔐 Backend Integration
-- **Authentication**: Ready-to-use auth flows with NextAuth.js
-- **Database**: Type-safe database operations with Prisma
-- **API Client**: HTTP requests with Fetch + TanStack Query
-- **State Management**: Simple and scalable with Zustand
-
-### 🌍 Production Features
-- **Internationalization**: Multi-language support with Next Intl
-- **Image Optimization**: Automatic image processing with Sharp
-- **Type Safety**: End-to-end TypeScript with Zod validation
-- **Essential Hooks**: 100+ useful React hooks with ReactUse for common patterns
-
-## 🤝 Get Started with Z.ai
-
-1. **Clone this scaffold** to jumpstart your project
-2. **Visit [chat.z.ai](https://chat.z.ai)** to access your AI coding assistant
-3. **Start building** with intelligent code generation and assistance
-4. **Deploy with confidence** using the production-ready setup
+| Header | Fungsi |
+|--------|--------|
+| **X-DNS-Prefetch-Control** | DNS prefetching enabled |
+| **Strict-Transport-Security** | HSTS enabled (2 tahun) |
+| **X-XSS-Protection** | XSS protection enabled |
+| **X-Frame-Options** | Clickjacking protection (SAMEORIGIN) |
+| **X-Content-Type-Options** | MIME type sniffing protection |
+| **Referrer-Policy** | Referrer policy (origin-when-cross-origin) |
+| **Permissions-Policy** | Feature policy restrictions |
 
 ---
 
-Built with ❤️ for the developer community. Supercharged by [Z.ai](https://chat.z.ai) 🚀
+## 🤝 Kontribusi
+
+Kami menyambut kontribusi dari komunitas! Berikut panduannya:
+
+### Cara Berkontribusi
+
+1. **Fork Repository**
+   ```bash
+   git fork https://github.com/biezz-2/qr-maker.git
+   ```
+
+2. **Buat Branch Baru**
+   ```bash
+   git checkout -b feature/amazing-feature
+   ```
+
+3. **Commit Perubahan**
+   ```bash
+   git commit -m 'Add amazing feature'
+   ```
+
+4. **Push ke Branch**
+   ```bash
+   git push origin feature/amazing-feature
+   ```
+
+5. **Buka Pull Request**
+
+### Panduan Coding
+
+- Gunakan **TypeScript** untuk semua file baru
+- Ikuti **ESLint** rules yang sudah dikonfigurasi
+- Gunakan **Conventional Commits**
+- Test code sebelum submit
+- Update dokumentasi jika diperlukan
+
+### Ide Kontribusi
+
+| Feature | Deskripsi |
+|---------|-----------|
+| 📊 **Dashboard** | History kode QR |
+| 🔗 **Short URL** | Integrasi URL shortener |
+| 📈 **Analytics** | Scan count tracking |
+| 🎨 **Themes** | Lebih banyak tema visual |
+| 🌐 **i18n** | Multi-language support |
+| 📱 **PWA** | Offline support |
+| 🔐 **Password** | Password protected QR |
+| 📊 **Batch** | CSV upload generation |
+
+---
+
+## 📈 Roadmap
+
+### v1.0 (Current)
+- ✅ Basic QR code generation
+- ✅ Multiple content types
+- ✅ Custom colors & logo
+- ✅ Background image support
+- ✅ Download as PNG
+
+### v1.1 (Upcoming)
+- [ ] Server-side generation API
+- [ ] QR code history
+- [ ] User authentication
+- [ ] Save & edit QR codes
+
+### v2.0 (Future)
+- [ ] QR code analytics
+- [ ] Dynamic QR codes
+- [ ] Team collaboration
+- [ ] API access
+- [ ] Mobile app
+
+---
+
+## 📄 Lisensi
+
+Proyek ini dilisensikan di bawah **MIT License** - lihat file [LICENSE](LICENSE) untuk detail lengkap.
+
+---
+
+## 🙏 Credits
+
+| Role | Name/Link |
+|------|-----------|
+| **Author** | [Biezz](https://github.com/biezz-2) |
+| **UI Components** | [shadcn/ui](https://ui.shadcn.com) |
+| **Icons** | [Lucide](https://lucide.dev) |
+| **QR Library** | [qrcode.react](https://github.com/soldair/node-qrcode) |
+| **Framework** | [Next.js](https://nextjs.org) |
+| **Styling** | [Tailwind CSS](https://tailwindcss.com) |
+
+---
+
+<div align="center">
+
+## 🌟 Didukung oleh Teknologi Masa Depan
+
+[![Next.js](https://img.shields.io/badge/Next.js-15-black?style=for-the-badge&logo=next.js)](https://nextjs.org)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?style=for-the-badge&logo=typescript)](https://typescriptlang.org)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind-4-38bdf8?style=for-the-badge&logo=tailwindcss)](https://tailwindcss.com)
+[![Bun](https://img.shields.io/badge/Bun-1.3-fbf0df?style=for-the-badge&logo=bun)](https://bun.sh)
+
+---
+
+Dibuat oleh [Biezz](https://github.com/biezz-2)
+
+</div>
